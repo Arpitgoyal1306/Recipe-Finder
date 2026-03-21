@@ -4,7 +4,7 @@
 
 This project is a simple and interactive **Recipe Finder Web Application** that allows users to search and explore different recipes.
 
-Users can search for recipes by name, filter them by category, and sort results alphabetically.  
+Users can search for recipes by name, filter them by meal type, and sort results alphabetically.
 
 ---
 
@@ -12,17 +12,17 @@ Users can search for recipes by name, filter them by category, and sort results 
 
 ### API Used
 
-This project uses the **TheMealDB API** to fetch recipe data.
+This project uses the **DummyJSON Recipes API** to fetch recipe data.
 
 ### Why this API?
 
-- Provides free access to a large collection of recipes  
-- Simple and beginner-friendly API structure  
-- Supports searching and filtering of recipes  
+- Provides free access to a larger collection of recipes
+- Simple and beginner-friendly API structure
+- Supports searching and filtering workflows in the app
 
 ### How it works
 
-When the application loads, it sends a request to the TheMealDB API using JavaScript `fetch`.
+When the application loads, it sends a request to the DummyJSON Recipes API using JavaScript `fetch`.
 
 The API returns recipe data in **JSON format**, which is then processed using JavaScript and displayed dynamically on the user interface.
 
@@ -34,9 +34,9 @@ Users can search, filter, and sort recipes using built-in JavaScript array metho
 
 This project is built using the following technologies:
 
-- **HTML** → Provides the structure of the web page  
-- **CSS** → Handles styling, layout, and responsiveness  
-- **JavaScript** → Implements functionality, API integration, and dynamic content updates  
+- **HTML** -> Provides the structure of the web page
+- **CSS** -> Handles styling, layout, and responsiveness
+- **JavaScript** -> Implements functionality, API integration, and dynamic content updates
 
 ---
 
@@ -44,22 +44,22 @@ This project is built using the following technologies:
 
 ### Features
 
-- Fetches recipe data from a public API  
-- Displays recipe name, image, and category  
-- Search recipes by name  
-- Filter recipes by category  
-- Sort recipes alphabetically (A–Z / Z–A)  
-- Responsive and user-friendly interface  
-- Loading indicator while fetching data  
+- Fetches recipe data from a public API
+- Displays recipe name, image, and meal type
+- Search recipes by name
+- Filter recipes by meal type
+- Sort recipes alphabetically (A-Z / Z-A)
+- Responsive and user-friendly interface
+- Loading indicator while fetching data
 
 ---
 
 ## How to Use
 
-1. Open the application in a web browser  
-2. Wait for recipes to load  
-3. Enter a recipe name in the search field  
-4. Select a category to filter recipes  
-5. Choose a sorting option (A–Z or Z–A)  
+1. Open the application in a web browser.
+2. Wait for recipes to load.
+3. Enter a recipe name in the search field.
+4. Select a meal type to filter recipes.
+5. Choose a sorting option (A-Z or Z-A).
 
 ---
