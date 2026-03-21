@@ -1,10 +1,10 @@
-# Weather App
+# Recipe Finder
 
 ## Introduction
 
-This project is a simple and interactive **Weather Web Application** that allows users to check real-time weather conditions of any city.
+This project is a simple and interactive **Recipe Finder Web Application** that allows users to search and explore different recipes.
 
-Users can search for a city and view details like temperature, weather condition, humidity, and wind speed.
+Users can search for recipes by name, filter them by category, and sort results alphabetically.  
 
 ---
 
@@ -12,35 +12,31 @@ Users can search for a city and view details like temperature, weather condition
 
 ### API Used
 
-This project uses the **Weatherstack API** to fetch real-time weather data.
+This project uses the **TheMealDB API** to fetch recipe data.
 
 ### Why this API?
 
-* Provides real-time weather data
-* Lightweight and beginner-friendly
-* Supports global city search
-* Free tier available for development
+- Provides free access to a large collection of recipes  
+- Simple and beginner-friendly API structure  
+- Supports searching and filtering of recipes  
 
 ### How it works
 
-When a user enters a city name, the app sends a request to the Weatherstack API.
-The API responds with weather data in JSON format, which is then displayed on the UI.
+When the application loads, it sends a request to the TheMealDB API using JavaScript `fetch`.
 
-Example API request:
+The API returns recipe data in **JSON format**, which is then processed using JavaScript and displayed dynamically on the user interface.
 
-```
-http://api.weatherstack.com/current?access_key=YOUR_API_KEY&query=CityName
-```
+Users can search, filter, and sort recipes using built-in JavaScript array methods.
 
 ---
 
-## Tech-Stack
+## Tech Stack
 
 This project is built using the following technologies:
 
-* **HTML** → Structure of the web page
-* **CSS** → Styling and layout
-* **JavaScript** → Functionality and API integration
+- **HTML** → Provides the structure of the web page  
+- **CSS** → Handles styling, layout, and responsiveness  
+- **JavaScript** → Implements functionality, API integration, and dynamic content updates  
 
 ---
 
@@ -48,20 +44,22 @@ This project is built using the following technologies:
 
 ### Features
 
-* Search weather by city name
-* Displays:
-  * Temperature
-  * Weather condition
-  * Humidity
-  * Wind speed
-* Real-time data using API
-* Clean and user-friendly UI
+- Fetches recipe data from a public API  
+- Displays recipe name, image, and category  
+- Search recipes by name  
+- Filter recipes by category  
+- Sort recipes alphabetically (A–Z / Z–A)  
+- Responsive and user-friendly interface  
+- Loading indicator while fetching data  
 
-### How to Use
+---
 
-1. Open the application in a browser
-2. Enter the name of a city
-3. Click the search button
-4. View the weather details instantly
+## How to Use
+
+1. Open the application in a web browser  
+2. Wait for recipes to load  
+3. Enter a recipe name in the search field  
+4. Select a category to filter recipes  
+5. Choose a sorting option (A–Z or Z–A)  
 
 ---
