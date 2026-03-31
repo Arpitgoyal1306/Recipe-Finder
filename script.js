@@ -38,8 +38,7 @@ async function loadAllRecipes() {
   loading.style.display = "block";
   recipeContainer.innerHTML = "";
 
-  let response = await fetch("https://dummyjson.com/recipes");
-
+  let response = await fetch("https://dummyjson.com/recipes")
   let data = await response.json();
 
   loading.style.display = "none";
@@ -52,7 +51,7 @@ async function loadAllRecipes() {
     card.innerHTML =
       "<img src='" + recipe.image + "'>" + "<h3>" + recipe.name + "</h3>";
 
-    recipeContainer.appendChild(card);
+    recipeContainer.appendChild(card)
   });
 }
 
