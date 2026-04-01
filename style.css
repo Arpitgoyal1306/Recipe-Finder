@@ -52,6 +52,27 @@ button {
   display: none;
 }
 
+#mealTypeSelect {
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: white;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#mealTypeSelect:hover {
+  border-color: #ff6b6b;
+}
+
+#mealTypeSelect:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
 
 @media (max-width: 900px) {
   #recipeContainer {
