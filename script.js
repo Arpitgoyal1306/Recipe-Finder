@@ -8,6 +8,12 @@ const sortSelect = document.getElementById("sortSelect");
 searchButton.addEventListener("click", getRecipes);
 mealTypeSelect.addEventListener("change", filterByMealType);
 sortSelect.addEventListener("change", loadAllRecipes);
+searchInput.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    getRecipes();
+  }
+});
+
 
 async function getRecipes() {
   let query = searchInput.value;
