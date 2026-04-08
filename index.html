@@ -8,26 +8,47 @@
   </head>
 
   <body>
-    <h1>Recipe Finder</h1>
+    <header class="top-bar">
+      <h1 class="logo">Recipe Finder</h1>
+      <div class="controls">
+        <select id="sortSelect">
+          <option value="default">Sort Recipes</option>
+          <option value="ratingHigh">Rating: High to Low</option>
+          <option value="ratingLow">Rating: Low to High</option>
+        </select>
 
-    <select id="sortSelect">
-      <option value="default">Sort Recipes</option>
-      <option value="ratingHigh">Rating: High to Low</option>
-      <option value="ratingLow">Rating: Low to High</option>
-    </select>
+        <select id="mealTypeSelect">
+          <option value="All">All Meals</option>
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Snack">Snack</option>
+          <option value="Dinner">Dinner</option>
+        </select>
 
-    <select id="mealTypeSelect">
-      <option value="All">All Meals</option>
-      <option value="Breakfast">Breakfast</option>
-      <option value="Lunch">Lunch</option>
-      <option value="Snack">Snack</option>
-      <option value="Dinner">Dinner</option>
-    </select>
+        <input type="text" id="searchInput" placeholder="Enter recipe name">
 
-    <input type="text" id="searchInput" placeholder="Enter recipe name" />
-    <button id="searchButton">Search</button>
+        <button id="searchButton">Search</button>
+        <button id="resetButton">Reset</button>
+      </div>
+    </header>
     <p id="loading" class="hidden">Loading.....</p>
+
     <div id="recipeContainer"></div>
+
+    <div id="recipeModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage">
+
+        <h3>Ingredients</h3> 
+        <ul id="modalIngredients"></ul>
+
+        <h3>Instructions</h3>
+        <p id="modalInstructions"></p>
+
+      </div>
+    </div>
 
     
     <script src="script.js"></script>
