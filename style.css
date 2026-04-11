@@ -2,11 +2,15 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+
+  /* warm off-white — feels airy, not clinical */
+  background-color: #F7F6F2;
 }
 
+/* HEADER */
+
 .top-bar {
-  background-color: #ff6b6b;
+  background-color: #2D4A35;
   color: white;
 
   display: flex;
@@ -14,12 +18,17 @@ body {
   align-items: center;
 
   padding: 15px 20px;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
 
 .logo {
+  color: #E8F5E0;
   margin: 0;
   font-size: 24px;
 }
+
+/* CONTROLS */
 
 .controls {
   display: flex;
@@ -31,71 +40,157 @@ body {
 .controls input,
 .controls button {
   padding: 8px 12px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  border: 1px solid #C8D5C0;
+
   font-size: 14px;
+
+  background-color: #FFFFFF;
+  color: #1E2A1F;
+
+  transition: background-color 0.2s,
+              box-shadow 0.2s;
 }
 
 .controls button {
   cursor: pointer;
 }
 
+/* subtle hover — no bright color */
+
 .controls button:hover {
-  background-color: #ff5252;
-  color: white;
+  background-color: #EDF3EA;
+
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
+
+/* DARK MODE */
+
+.dark-mode {
+  background-color: #161D1F;
+  color: #E8EAE6;
+}
+
+.dark-mode .top-bar {
+  background-color: #1A2B21;
+  color: black;
+}
+
+.dark-mode .logo {
+  color: #A8D4B0;
+}
+
+.dark-mode .card h3 {
+  color: #D4E8D0;
+}
+
+.dark-mode .card {
+  background-color: #1F2B28;
+  color: #E8EAE6;
+}
+
+.dark-mode .controls select,
+.dark-mode .controls input,
+.dark-mode .controls button {
+  background-color: #243028;
+  color: #D4E8D0;
+  border: 1px solid #3A5040;
+}
+
+.dark-mode #resetButton {
+  background-color: #243028;
+  color: #D4E8D0;
+  border: 1px solid #3A5040;
+}
+
+.dark-mode .modal-content {
+  background-color: #1F2B28;
+  color: #E8EAE6;
+}
+
+/* GRID */
 
 #recipeContainer {
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
 
-  gap: 20px;
-  padding: 20px;
+  gap: 24px;
+
+  padding: 24px;
 
   max-width: 1300px;
   margin: auto;
 }
 
+/* RESET BUTTON */
+
 #resetButton {
-  background-color: #ccc;
-  border: 1px solid #ccc;
+  background-color: #EDF3EA;
+  border: 1px solid #C8D5C0;
 }
 
 #resetButton:hover {
-  background-color: #ccc;
+  background-color: #DDEBD6;
 }
+
+/* CARDS */
 
 .card {
-  background-color: white;
-  border-radius: 10px;
+
+  /* crisp white card on warm background */
+
+  background-color: #FFFFFF;
+
+  border-radius: 12px;
+
   padding: 12px;
+
   cursor: pointer;
 
-  transition: transform 0.25s ease,
-  box-shadow 0.25s ease;
+  /* cooler, more refined shadow */
 
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(45, 74, 53, 0.10);
+
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
 }
+
+/* centered title */
+
+.card h3 {
+  text-align: center;
+  margin-top: 12px;
+
+  color: #1E2A1F;
+
+  font-size: 16px;
+}
+
+/* clean hover effect */
 
 .card:hover {
+
   transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+
+  box-shadow: 0 12px 28px rgba(45, 74, 53, 0.18);
 }
+
+/* IMAGE */
 
 .card img {
   width: 100%;
   border-radius: 8px;
+
   transition: transform 0.3s ease;
 }
 
 .card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
-.card:hover {
-  border: 1px solid #ff6b6b;
-}
+/* LOADING */
 
 .hidden {
   display: none;
@@ -107,6 +202,8 @@ body {
   margin-top: 10px;
 }
 
+/* MODAL */
+
 .modal {
   display: none;
   position: fixed;
@@ -116,11 +213,11 @@ body {
   width: 100%;
   height: 100%;
 
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(20, 32, 22, 0.55);
 }
 
 .modal-content {
-  background-color: white;
+  background-color: #FFFFFF;
 
   margin: 5% auto;
   padding: 20px;
@@ -128,8 +225,11 @@ body {
   width: 60%;
   max-width: 700px;
 
-  border-radius: 10px;
+  border-radius: 12px;
+
   text-align: left;
+
+  box-shadow: 0 10px 30px rgba(45, 74, 53, 0.18);
 }
 
 #closeModal {
@@ -138,12 +238,20 @@ body {
   cursor: pointer;
 }
 
+/* centered modal image */
+
 #modalImage {
-  margin: 0px 235px ;
-  width: 30%;
+  display: block;
+  margin: 0 auto;
+
+  width: 40%;
+
   border-radius: 8px;
+
   margin-bottom: 15px;
 }
+
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
 

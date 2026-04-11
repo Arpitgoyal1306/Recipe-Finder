@@ -5,16 +5,39 @@ const loading = document.getElementById("loading");
 const mealTypeSelect = document.getElementById("mealTypeSelect");
 const sortSelect = document.getElementById("sortSelect");
 const resetButton = document.getElementById("resetButton");
+const themeToggle = document.getElementById("themeToggle");
 
 searchButton.addEventListener("click", getRecipes);
 mealTypeSelect.addEventListener("change", filterByMealType);
 sortSelect.addEventListener("change", loadAllRecipes);
 resetButton.addEventListener("click", resetApp);
+themeToggle.addEventListener("click", toggleTheme);
 searchInput.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     getRecipes();
   }
 });
+
+function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+
+    themeToggle.textContent = "☀️";
+  } else {
+    localStorage.setItem("theme", "light");
+
+    themeToggle.textContent = "🌙";
+  }
+}
+let savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+  document.body.classList.add("dark-mode");
+
+  themeToggle.textContent = "☀️";
+}
 
 async function getRecipes() {
   let query = searchInput.value;
